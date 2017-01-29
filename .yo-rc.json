@@ -1,0 +1,14 @@
+{
+  "generator-m-ionic": {
+    "answers": {
+      "appName": "Employee Management ",
+      "appId": "com.prateek.krixiTestEmployeeApp",
+      "ionicCss": false,
+      "bowerPackages": [],
+      "platforms": [],
+      "plugins": [],
+      "appModule": "employeeManagement",
+      "ecosystems": []
+    }
+  }
+}
