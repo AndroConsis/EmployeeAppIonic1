@@ -1,0 +1,24 @@
+<ion-view hide-nav-bar="true" id="login-page" ng-init="init()" scroll="false">
+    <!-- do you want padding? -->
+    <ion-content class="has-header" padding="true">
+        <form class="list" id="login-form2">
+            <label class="item item-input" id="login-input3" name="username">
+                <span class="input-label">
+                    Username
+                </span>
+                <input ng-model="user.username" type="text">
+                </input>
+            </label>
+            <label class="item item-input" id="login-input4" name="password">
+                <span class="input-label">
+                    Password
+                </span>
+                <input ng-model="user.password" type="password">
+                </input>
+            </label>
+        </form>
+        <button class="button button-positive button-block" id="login-button1" ng-click="login()">
+            Sign In
+        </button>
+    </ion-content>
+</ion-view>

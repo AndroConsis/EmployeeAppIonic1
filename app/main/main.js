@@ -8,14 +8,19 @@ angular.module('main', [
     .config(function($stateProvider, $urlRouterProvider) {
 
         // ROUTING with ui.router
-        $urlRouterProvider.otherwise('/main/list');
+        $urlRouterProvider.otherwise('/');
         $stateProvider
         // this state is placed in the <ion-nav-view> in the index.html
+            .state('login', {
+                url: '/',
+                templateUrl: 'main/templates/login.html',
+                controller: 'LoginCtrl'
+            })
             .state('main', {
                 url: '/main',
                 abstract: true,
                 templateUrl: 'main/templates/menu.html',
-                controller: 'MenuCtrl as menu'
+                controller: 'MenuCtrl'
             })
             .state('main.list', {
                 url: '/list',
