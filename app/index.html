@@ -19,6 +19,7 @@
     <!-- build:css main/styles/app.css -->
     <!-- inject:css -->
     <link rel="stylesheet" href="main/styles/main.css">
+    <link href="bower_components/ion-floating-menu/dist/ion-floating-menu.css" rel="stylesheet" type="text/css"/>
     <!-- endinject -->
     <!-- endbuild -->
   </head>
@@ -43,6 +44,7 @@
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/ionic/release/js/ionic.js"></script>
     <script src="bower_components/ionic/release/js/ionic-angular.js"></script>
+    <script src="bower_components/ion-floating-menu/dist/ion-floating-menu.js" type="text/javascript"></script>
     <script src="bower_components/ngCordova/dist/ng-cordova.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
@@ -51,8 +53,11 @@
     <!-- inject:js -->
     <script src="main/main.js"></script>
     <script src="main/services/login-service-serv.js"></script>
+    <script src="main/services/database-serv.js"></script>
+    <script src="main/controllers/new-employee-ctrl.js"></script>
     <script src="main/controllers/menu-ctrl.js"></script>
     <script src="main/controllers/login-ctrl.js"></script>
+    <script src="main/controllers/list-ctrl.js"></script>
     <script src="main/constants/emp-app-const.js"></script>
     <script src="main/constants/config-const.js"></script>
     <script src="app.js"></script>

@@ -3,6 +3,7 @@ angular.module('main', [
         'ionic',
         'ngCordova',
         'ui.router',
+        'ion-floating-menu'
         // TODO: load other modules selected during generation
     ])
     .config(function($stateProvider, $urlRouterProvider) {
@@ -27,8 +28,12 @@ angular.module('main', [
                 views: {
                     'pageContent': {
                         templateUrl: 'main/templates/list.html',
-                        // controller: '<someCtrl> as ctrl'
+                        controller: 'ListCtrl'
                     }
                 }
+            }).state('add-new-employee', {
+                url: '/add-new-employee',
+                templateUrl: 'main/templates/new-employee.html',
+                controller: 'NewEmployeeCtrl'
             });
     });

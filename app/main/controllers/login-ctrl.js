@@ -9,6 +9,9 @@ angular.module('main')
             $scope.user = {};
         }
 
+        /**
+         * Represents ng-click login, makes call to Login Service. Locate to main.List is Login successful
+         */
         function login() {
             LoginService.loginUser($scope.user.username, $scope.user.password).then(function() {
                 $state.go('main.list');
