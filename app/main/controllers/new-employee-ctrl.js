@@ -1,7 +1,16 @@
 'use strict';
 angular.module('main')
-.controller('NewEmployeeCtrl', function ($log) {
+    .controller('NewEmployeeCtrl', function($scope) {
+        $scope.departments = [{
+            text: 'IT/Software',
+            value: 1
+        }, {
+            text: 'Management Services',
+            value: 2
+        }, {
+            text: 'Human Resources',
+            value: 3
+        }];
 
-  $log.log('Hello from your Controller: NewEmployeeCtrl in module main:. This is your controller:', this);
-
-});
+        $scope.selectedDept = $scope.departments[0];
+    });

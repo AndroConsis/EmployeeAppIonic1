@@ -1,8 +1,17 @@
 <ion-view view-title="Home">
     <ion-content>
-        <ion-list>
+        <div class="center-aligned-wrapper-element empty-screen-container" ng-click="addNewEmployee()" ng-if="!employees.length">
+            Click Here to Add New Employee
+        </div>
+        <ion-list ng-if="employees.length">
             <ion-item>
             </ion-item>
         </ion-list>
     </ion-content>
+    <ion-floating-menu ng-if="employees.length">
+        <ion-floating-item click="addNewEmployee()" icon="ion-person" text="Add Employee">
+        </ion-floating-item>
+        <ion-floating-item click="myEvent()" icon="ion-funnel" text="Filter By Department">
+        </ion-floating-item>
+    </ion-floating-menu>
 </ion-view>

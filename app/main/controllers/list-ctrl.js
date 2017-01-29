@@ -1,7 +1,16 @@
 'use strict';
 angular.module('main')
-.controller('ListCtrl', function ($log) {
+    .controller('ListCtrl', function($scope, $state, $ionicViewSwitcher) {
+        $scope.init = init;
 
-  $log.log('Hello from your Controller: ListCtrl in module main:. This is your controller:', this);
+        $scope.addNewEmployee = addNewEmployee;
 
-});
+        function init() {
+            $scope.employees = [];
+        }
+
+        function addNewEmployee() {
+            $ionicViewSwitcher.nextDirection('forward');
+            $state.go('add-new-employee');
+        }
+    });

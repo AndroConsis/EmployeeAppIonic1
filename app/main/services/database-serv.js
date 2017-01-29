@@ -48,6 +48,7 @@ angular.module('main').service('DatabaseService', function(Constants) {
                 Constants.DB_TABLE.COLUMNS.DEPT_NAME + ' TEXT' +
                 ')';
             tx.executeSql(query);
+
         }, function(error) {
             alert('Transaction ERROR: ' + error.message);
         }, function() {
@@ -66,6 +67,21 @@ angular.module('main').service('DatabaseService', function(Constants) {
             });
         });
     }
+
+    // wrapper for db query execution
+    /*function executequery(query, params) {
+        var deferred = $q.defer();
+        db.transaction(function(tx) {
+            tx.executeSql(query, params, function(tx, result) {
+                deferred.resolve(result.rows);
+            }, function(tx, error) {
+                alert('error ' + error.message);
+                deferred.reject(error.message);
+            });
+        });
+        return deferred.promise;
+    }
+*/
 
     return databaseService;
 });

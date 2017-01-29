@@ -1,4 +1,11 @@
-<ion-view view-title="main module">
+<ion-view view-title="New Employee">
+    <ion-nav-bar>
+        <ion-nav-back-button class="button-clear">
+            <i class="ion-arrow-left-c">
+            </i>
+            Back
+        </ion-nav-back-button>
+    </ion-nav-bar>
     <ion-content class="has-header" padding="true">
         <form class="list" id="newEmployee-form5">
             <label class="item item-input" id="newEmployee-input7" name="Name">
@@ -47,9 +54,14 @@
                 <span class="input-label">
                     Department
                 </span>
-                <select>
+                <select ng-model="selectedDept" ng-options="item as item.text for item in departments">
                 </select>
             </label>
+            <!-- <button class="button button-positive button-block" id="login-button1">
+                Save
+            </button> -->
         </form>
     </ion-content>
+    <swipe-to-complete button-text="'SWIPE TO SAVE'">
+    </swipe-to-complete>
 </ion-view>
