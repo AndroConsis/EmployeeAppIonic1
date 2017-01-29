@@ -1,4 +1,4 @@
-<ion-view view-title="New Employee">
+<ion-view ng-init="init()" view-title="New Employee">
     <ion-nav-bar>
         <ion-nav-back-button class="button-clear">
             <i class="ion-arrow-left-c">
@@ -12,49 +12,49 @@
                 <span class="input-label">
                     Name
                 </span>
-                <input placeholder="Name" type="text">
+                <input ng-model="employee.name" placeholder="Name" type="text">
                 </input>
             </label>
             <label class="item item-input" id="newEmployee-input11">
                 <span class="input-label">
                     Employee ID
                 </span>
-                <input placeholder="Employee ID" type="text">
+                <input ng-model="employee.id" placeholder="Employee ID" type="text">
                 </input>
             </label>
             <label class="item item-input" id="newEmployee-input8">
                 <span class="input-label">
                     Phone
                 </span>
-                <input placeholder="Phone" type="tel">
+                <input ng-model="employee.phone" placeholder="Phone" type="tel">
                 </input>
             </label>
             <label class="item item-input" id="newEmployee-input9">
                 <span class="input-label">
                     Email
                 </span>
-                <input placeholder="Email" type="email">
+                <input ng-model="employee.email" placeholder="Email" type="email">
                 </input>
             </label>
             <label class="item item-input" id="newEmployee-input10">
                 <span class="input-label">
                     DOB
                 </span>
-                <input placeholder="DOB" type="date">
+                <input ng-model="employee.dob" placeholder="DOB" type="date">
                 </input>
             </label>
             <label class="item item-input" id="newEmployee-input12">
                 <span class="input-label">
                     Salary
                 </span>
-                <input placeholder="Monthly Salary" type="number">
+                <input ng-model="employee.salary" placeholder="Monthly Salary" type="number">
                 </input>
             </label>
             <label class="item item-select" id="newEmployee-select1">
                 <span class="input-label">
                     Department
                 </span>
-                <select ng-model="selectedDept" ng-options="item as item.text for item in departments">
+                <select ng-model="employee.dept" ng-options="item as item.text for item in departments">
                 </select>
             </label>
             <!-- <button class="button button-positive button-block" id="login-button1">
@@ -62,6 +62,6 @@
             </button> -->
         </form>
     </ion-content>
-    <swipe-to-complete button-text="'SWIPE TO SAVE'">
+    <swipe-to-complete button-text="'SWIPE TO SAVE'" on-swipe-end="saveEmployeeDetails">
     </swipe-to-complete>
 </ion-view>
